@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--
+  Manuell kuratiert (kein Portfolio-Pipeline-Generator wie bei den Einzelprojekten).
+  Layout + Tokens identisch zu index-template.html aus wgnd-skills/project-case,
+  damit dieser Hub und die einzelnen Case-Hubs zusammenpassen.
+-->
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kay Wiegand — Data & AI Cases</title>
+  <link rel="stylesheet" href="css/slides.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-ui);
+      color: var(--ink); line-height: 1.6; background: #FAFAFA;
+    }
+
+    /* ─── Header ─────────────────────────────── */
+    header {
+      background: var(--ink);
+      color: white; padding: 4rem 2rem 3.5rem;
+    }
+    .header-inner { max-width: 900px; margin: 0 auto; }
+    header h1 { font-size: 3.5rem; font-weight: 100; margin-bottom: 1.35rem; }
+    header .tagline  { font-size: 1rem; opacity: 0.85; margin-bottom: 0.15rem; }
+    header .subtitle { font-size: 1rem; opacity: 0.85; margin-bottom: 0; }
+
+    .kpi-row { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 5rem; }
+    .kpi { border-left: 3px solid rgba(255,255,255,0.25); padding-left: 14px; text-align: left; }
+    .kpi .v { font-size: 1.6rem; font-weight: 500; color: #fff; line-height: 1; }
+    .kpi .l { font-size: 0.68rem; color: rgba(255,255,255,0.6); letter-spacing: 0.04em; margin-top: 6px; }
+    .kpi.positive { border-left-color: var(--color-kpi-positive); }
+    .kpi.positive .v { color: var(--color-kpi-positive); }
+
+    /* ─── Main rhythm ─────────────────────────── */
+    main { max-width: 900px; margin: 0 auto; padding: 6rem 0 0; }
+    section { margin-bottom: 6rem; }
+
+    .section-label {
+      font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.6em;
+    }
+    h2 { font-size: 1.35rem; font-weight: 500; color: var(--navy); margin-bottom: 0.5rem; }
+    .section-intro { font-size: 0.92rem; color: var(--ink-body); margin-bottom: 0.5rem; line-height: 1.6; }
+
+    .about-grid {
+      display: flex; gap: 3rem;
+      margin-top: 1.2rem;
+    }
+    .about-col { flex: 1; min-width: 0; }
+    @media (max-width: 760px) {
+      .about-grid { flex-direction: column; gap: 0; }
+    }
+    .about-item {
+      font-size: 0.92rem; color: var(--ink-body); line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .about-item:last-child { margin-bottom: 0; }
+    .about-item > strong:first-child { display: block; color: var(--navy); font-weight: 500; margin-bottom: 0.2em; }
+
+    /* ─── Case Cards Grid — auto-fit statt fix 3-spaltig, damit die 4. Karte
+       sauber umbricht statt eine leere Lücke zu reissen ── */
+    .view-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 1.4rem;
+    }
+
+    .view-card {
+      background: var(--card);
+      padding: 22px 24px;
+      border-radius: var(--radius-card);
+      text-decoration: none; color: inherit;
+      transition: background 0.15s, transform 0.15s;
+      display: flex; flex-direction: column;
+    }
+    .view-card:hover { background: var(--card-border); transform: translateY(-2px); }
+
+    .view-label {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase;
+      margin-bottom: 1em; color: var(--accent);
+    }
+
+    .view-card h3 { font-size: 1.15rem; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+    .view-card .view-desc { font-size: 0.85rem; color: var(--ink-body); margin-bottom: 14px; line-height: 1.5; flex-grow: 1; }
+    .view-meta { display: flex; gap: 12px; align-items: center; margin-top: 12px; flex-wrap: wrap; }
+    .view-badge {
+      font-size: 0.7rem; font-weight: 600; padding: 3px 9px; border-radius: var(--radius-box);
+      background: #fff; color: var(--navy);
+    }
+
+    /* ─── Quick Links ─────────────────────────── */
+    .links-section { padding: 0; margin-top: 1.2rem; }
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .quick-link {
+      display: flex; align-items: center; gap: 10px;
+      padding: 12px 14px; border-radius: var(--radius-card);
+      text-decoration: none; color: var(--accent);
+      background: var(--bg-box-default);
+      transition: background 0.15s, color 0.15s;
+      font-size: 0.9rem; font-weight: 500;
+    }
+    .quick-link:hover { background: var(--card-border); color: var(--navy); }
+    .quick-link::before { content: "→"; font-weight: 700; }
+    .quick-link .note { font-size: 0.75rem; color: var(--ink-soft); font-weight: 400; margin-left: auto; }
+
+    /* ─── Footer ─────────────────────────── */
+    footer {
+      background: var(--bg-box-default); border-top: 1px solid var(--card-border);
+      padding: 2rem; text-align: center; color: var(--ink-soft); font-size: 0.85rem;
+      margin-top: 4rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1>Kay Wiegand — Data & AI Cases</h1>
+    <p class="tagline">Portfolio-Hub für Data-Projekte</p>
+    <p class="subtitle">Data Engineering · Data Science · Data Analysis | 2026</p>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="v">3</div>
+        <div class="l">Cases live</div>
+      </div>
+      <div class="kpi">
+        <div class="v">DE · DS · DA</div>
+        <div class="l">Disziplinen abgedeckt</div>
+      </div>
+      <div class="kpi positive">
+        <div class="v">94 M+</div>
+        <div class="l">Zeilen im größten Master-Datensatz</div>
+      </div>
+      <div class="kpi">
+        <div class="v">2026</div>
+        <div class="l">aktueller Jahrgang</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ─── Kontext ─────────────────────────── -->
+  <section>
+    <div class="section-label">Kontext</div>
+    <h2>Das hier</h2>
+    <div class="about-grid">
+      <div class="about-col">
+        <div class="about-item"><strong>Wer</strong>Senior Tech Consultant mit 20+ Jahren Erfahrung in digitalen Produkten, aktuell im Übergang zu Data & AI Engineering.</div>
+        <div class="about-item"><strong>Warum dieser Hub</strong>Ein Link für Bewerbungen und Gespräche. Zeigt direkt auf fertig aufbereitete Cases, statt auf verstreute Repos.</div>
+      </div>
+      <div class="about-col">
+        <div class="about-item"><strong>Wie gearbeitet wird</strong>Jeder Case dokumentiert Problem, Ansatz und Ergebnis nachvollziehbar. Code und Notebooks reproduzierbar.</div>
+        <div class="about-item"><strong>Was noch kommt</strong>Dieser Hub ist ein Zwischenstand. Er wird abgelöst durch kw-data-portfolio, die vollständige Portfolio-Website.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Cases ─────────────────────────── -->
+  <section>
+    <div class="section-label">Cases</div>
+    <h2>Vier Projekte, ein Ansatz</h2>
+    <p class="section-intro">
+      Reduzieren was da ist, dokumentieren wie es entstand — jede Karte führt direkt zum vollständigen Case.
+    </p>
+
+    <div class="view-grid">
+      <a href="https://kaywiegand.github.io/zh-tram-flow/" class="view-card" target="_blank">
+        <div class="view-label">Data Science</div>
+        <h3>Zurich Tram Flow</h3>
+        <p class="view-desc">Verspätungsvorhersage im Zürcher Tramnetz — vom Rohdatensatz zum ML-Modell mit Dashboard.</p>
+        <div class="view-meta">
+          <span class="view-badge">DS</span>
+        </div>
+      </a>
+      <a href="https://kaywiegand.github.io/zh-tram-data/" class="view-card" target="_blank">
+        <div class="view-label">Data Engineering</div>
+        <h3>Zurich Tram Data</h3>
+        <p class="view-desc">Master-Datensatz-Pipeline: 38 GB Rohdaten → 94,4 M Halt-Ereignisse, 5 Quellen vereint.</p>
+        <div class="view-meta">
+          <span class="view-badge">DE</span>
+        </div>
+      </a>
+      <a href="https://kaywiegand.github.io/us-used-vehicle-resales/" class="view-card" target="_blank">
+        <div class="view-label">Data Science</div>
+        <h3>US Used Vehicle Resales</h3>
+        <p class="view-desc">Bad-Buy Prediction — Fehlkäufe vor dem Kauf erkennen, 448-Runs-Experimentierframework.</p>
+        <div class="view-meta">
+          <span class="view-badge">DS</span>
+        </div>
+      </a>
+      <a href="https://github.com/kaywiegand/wgnd-ai-dev-toolchain" class="view-card" target="_blank">
+        <div class="view-label">Meta / Process</div>
+        <h3>AI Dev Toolchain</h3>
+        <p class="view-desc">Wie Scaffolding, Toolkit und Claude-Code-Skills zusammen Projekt-Bootstrap, Review und Portfolio-Aufbereitung automatisieren.</p>
+        <div class="view-meta">
+          <span class="view-badge">Tooling</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── Weitere Ressourcen ─────────────────────── -->
+  <section>
+    <div class="section-label">Weitere Ressourcen</div>
+    <h2>Direkt-Zugriff</h2>
+
+    <div class="links-section">
+      <div class="links-grid">
+        <a href="https://github.com/kaywiegand" class="quick-link" target="_blank">GitHub-Profil</a>
+        <a href="https://www.linkedin.com/in/kaywiegand/" class="quick-link" target="_blank">LinkedIn</a>
+        <a href="https://data.kaywiegand.de" class="quick-link" target="_blank">Volle Portfolio-Site <span class="note">in Aufbau</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    Kay Wiegand — Data & AI Cases |
+    <a href="https://www.linkedin.com/in/kaywiegand/" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/kaywiegand" target="_blank">GitHub</a>
+  </p>
+</footer>
+
+</body>
+</html>
