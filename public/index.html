@@ -32,24 +32,26 @@
       color: var(--ink); line-height: 1.6; background: var(--bg);
     }
 
-    /* ─── Header ─────────────────────────────── */
+    /* ─── Header ── nur Logo + Kontakt, analog Cover-Letter-Briefkopf ── */
     header {
-      background: #fff; border-bottom: 3px solid var(--accent);
-      padding: 3rem 2rem 3rem;
+      background: #fff; border-bottom: 1px solid var(--card-border);
+      padding: 2.2rem 2rem;
     }
     .header-inner { max-width: 900px; margin: 0 auto; }
-    .identity-row { display: flex; align-items: center; gap: 18px; margin-bottom: 2.5rem; flex-wrap: wrap; }
+    .identity-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
     .identity-row img { height: 46px; width: auto; }
     .identity-text { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.5; }
     .identity-text strong { color: var(--ink); font-weight: 700; }
     .identity-text a { color: var(--ink-soft); text-decoration: none; }
     .identity-text a:hover { color: var(--accent); }
 
-    header h1 { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 3rem; color: var(--ink); margin-bottom: 0.6rem; letter-spacing: -0.01em; }
-    header .tagline  { font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 0.2rem; }
-    header .subtitle { font-size: 0.95rem; color: var(--ink-body); margin-bottom: 0; }
+    /* ─── Hero — Titel/Sublines/KPIs, mit großzügigem Abstand zum Briefkopf ── */
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 2rem 3rem; }
+    .hero h1 { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 3rem; color: var(--ink); margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+    .hero .tagline  { font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 0.2rem; }
+    .hero .subtitle { font-size: 0.95rem; color: var(--ink-body); margin-bottom: 0; }
 
-    .kpi-row { display: flex; gap: 30px; flex-wrap: wrap; margin-top: 3rem; }
+    .kpi-row { display: flex; gap: 30px; flex-wrap: wrap; margin-top: 3rem; border-top: 3px solid var(--accent); padding-top: 2rem; }
     .kpi { border-left: 3px solid var(--card-border); padding-left: 14px; text-align: left; }
     .kpi.accent { border-left-color: var(--accent); }
     .kpi .v { font-size: 1.6rem; font-weight: 900; color: var(--ink); line-height: 1; }
@@ -146,29 +148,32 @@
         Berlin · <a href="tel:+4915202907948">+49 152 029 079 48</a> · <a href="mailto:hey@kaywiegand.de">hey@kaywiegand.de</a>
       </div>
     </div>
-    <h1>Data & AI Project Overview</h1>
-    <p class="tagline">Portfolio-Hub für Data-Projekte</p>
-    <p class="subtitle">Data Engineering · Data Science · Data Analysis | 2025–2026</p>
-    <div class="kpi-row">
-      <div class="kpi">
-        <div class="v">2</div>
-        <div class="l">Data-Science-Projekte</div>
-      </div>
-      <div class="kpi">
-        <div class="v">1</div>
-        <div class="l">Data-Engineering-Projekt</div>
-      </div>
-      <div class="kpi accent">
-        <div class="v">94 M+</div>
-        <div class="l">Zeilen im größten Master-Datensatz</div>
-      </div>
-      <div class="kpi">
-        <div class="v">448</div>
-        <div class="l">Modell-Runs im größten Experimentierframework</div>
-      </div>
-    </div>
   </div>
 </header>
+
+<div class="hero">
+  <h1>Data & AI Project Overview</h1>
+  <p class="tagline">Portfolio-Hub für Data-Projekte</p>
+  <p class="subtitle">Data Engineering · Data Science · Data Analysis | 2025–2026</p>
+  <div class="kpi-row">
+    <div class="kpi">
+      <div class="v">2</div>
+      <div class="l">Data-Science-Projekte</div>
+    </div>
+    <div class="kpi">
+      <div class="v">1</div>
+      <div class="l">Data-Engineering-Projekt</div>
+    </div>
+    <div class="kpi accent">
+      <div class="v">94 M+</div>
+      <div class="l">Zeilen im größten Master-Datensatz</div>
+    </div>
+    <div class="kpi">
+      <div class="v">448</div>
+      <div class="l">Modell-Runs im größten Experimentierframework</div>
+    </div>
+  </div>
+</div>
 
 <main>
 
