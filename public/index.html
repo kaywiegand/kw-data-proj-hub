@@ -95,17 +95,17 @@
     .ht-dot-wrap { flex: 1; display: flex; justify-content: center; }
     .ht-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); position: relative; z-index: 1; }
 
-    /* ─── Data-to-Value Approach — 3 Spalten, Mittelpunkt = Timeline-Punkt ── */
-    .approach-grid { display: flex; margin-top: 1.8rem; }
-    @media (max-width: 760px) { .approach-grid { flex-direction: column; } }
-    .approach-col { flex: 1; display: flex; justify-content: center; }
-    .approach-col-inner { max-width: 210px; width: 100%; }
-    @media (max-width: 760px) { .approach-col-inner { max-width: none; } }
-    .approach-col h4 { font-size: 0.95rem; font-weight: 700; color: var(--ink); margin-bottom: 0.8rem; }
-    .approach-col ul { list-style: none; }
-    .approach-col li { font-size: 0.85rem; color: var(--ink-body); padding: 0.6rem 0; border-top: 1px solid var(--card-border); line-height: 1.4; }
-    .approach-col li:first-child { border-top: none; }
-    .approach-col .flow-line { font-size: 0.9rem; color: var(--accent); font-weight: 700; }
+    /* ─── Data-to-Value Approach — Verbundene Linie ── */
+    .vb-grid { display: flex; margin-top: 0; }
+    @media (max-width: 760px) { .vb-grid { flex-direction: column; } }
+    .vb-col { flex: 1; display: flex; justify-content: center; }
+    .vb-inner { max-width: 210px; width: 100%; position: relative; padding-top: 22px; }
+    .vb-inner::before { content: ""; position: absolute; top: 0; left: 50%; width: 1px; height: 22px; background: var(--card-border); }
+    .vb-inner h4 { text-align: center; font-size: 0.95rem; font-weight: 700; color: var(--ink); margin-bottom: 0.8rem; }
+    .vb-inner ul { list-style: disc; padding-left: 1.1em; }
+    .vb-inner li::marker { color: var(--accent); }
+    .vb-inner li { font-size: 0.85rem; color: var(--ink-body); padding: 0.5rem 0; border-top: 1px solid var(--card-border); }
+    .vb-inner li:first-child { border-top: none; }
     .extra-text { margin-top: 1.6rem; }
     .extra-text p { font-size: 0.9rem; color: var(--ink-body); line-height: 1.6; margin: 0; max-width: 72ch; }
     .extra-text.full-width p { max-width: none; }
@@ -253,7 +253,7 @@
     </div>
   </section>
 
-  <!-- ─── Data-to-Value Approach ─────────────── -->
+  <!-- ─── Data-to-Value Approach — E9 Variante B: Verbundene Linie ─── -->
   <section>
     <div class="section-label">Vorgehen</div>
     <h2>Data-to-Value Approach</h2>
@@ -264,9 +264,9 @@
         <div class="ht-dot-wrap"><div class="ht-dot"></div></div>
       </div>
     </div>
-    <div class="approach-grid">
-      <div class="approach-col">
-        <div class="approach-col-inner">
+    <div class="vb-grid">
+      <div class="vb-col">
+        <div class="vb-inner">
           <h4>Business Understanding</h4>
           <ul>
             <li>Business Problems &amp; Processes</li>
@@ -275,8 +275,8 @@
           </ul>
         </div>
       </div>
-      <div class="approach-col">
-        <div class="approach-col-inner">
+      <div class="vb-col">
+        <div class="vb-inner">
           <h4>Data &amp; Technology</h4>
           <ul>
             <li>Data Architecture &amp; Integration</li>
@@ -285,11 +285,13 @@
           </ul>
         </div>
       </div>
-      <div class="approach-col">
-        <div class="approach-col-inner">
+      <div class="vb-col">
+        <div class="vb-inner">
           <h4>Business Impact</h4>
           <ul>
-            <li class="flow-line">Insights → Decisions → Value</li>
+            <li>Insights extrahieren</li>
+            <li>Decisions fundieren</li>
+            <li>Value generieren</li>
           </ul>
         </div>
       </div>
