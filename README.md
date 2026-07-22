@@ -17,8 +17,9 @@ ist. Wird später durch diese abgelöst.
 
 ## Stack
 
-Plain HTML/CSS, keine Build-Tools, keine Dependencies. Gleiche Design-Tokens
-wie die einzelnen Case-Hubs (`public/css/slides.css`, unverändert übernommen).
+Plain HTML/CSS, keine Build-Tools, keine Dependencies. Visuelle Identität
+übernommen aus den Bewerbungsunterlagen (Cover-Letter): Font Lato, Akzentfarbe
+`#594B3B`, Logo-Mark (`public/img/logo-k.png`).
 
 ## Setup
 
