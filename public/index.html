@@ -48,8 +48,9 @@
     .hero h1 { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 4rem; text-transform: uppercase; color: var(--ink); margin-bottom: 0.8rem; letter-spacing: -0.01em; }
     .hero .subtitle { font-size: 1rem; color: var(--ink-body); max-width: 70ch; }
 
-    .kpi-row { display: flex; gap: 30px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
-    .kpi { border-left: 3px solid var(--card-border); padding-left: 14px; text-align: left; }
+    .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+    @media (max-width: 760px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } }
+    .kpi { border-left: 3px solid var(--card-border); padding-left: 14px; text-align: left; min-width: 0; }
     .kpi.accent { border-left-color: var(--accent); }
     .kpi .v { font-size: 1.6rem; font-weight: 900; color: var(--ink); line-height: 1; }
     .kpi.accent .v { color: var(--accent); }
