@@ -53,3 +53,31 @@ Metriken, Findings, Outputs gehören in Notebooks/Code — nicht hier.
   hat aber bis auf Weiteres keine aktive Custom Domain mehr. Wird zurückgetauscht,
   sobald `kw-data-portfolio` fertig ist. Footer-Link "Volle Portfolio-Site" zeigt
   deshalb auf den GitHub-Repo statt auf `data.kaywiegand.de` (sonst zirkulär).
+
+## 2026-07-22 — Header-Iteration + vollständige Content-Überarbeitung nach Kay-Briefing
+
+- Header über mehrere Iterationen korrigiert: enthält jetzt nur Logo (weiße
+  Variante, `public/img/logo-k-white.png`) + Kontaktblock (Name, Position,
+  Ausbildung, Ort, Telefon, E-Mail — ein zusammenhängender Text mit `<br>`,
+  Wortlaut 1:1 von Kay vorgegeben). Hintergrund `#3E4A5C` (Blaugrau aus dem
+  ursprünglichen `index-template.html`-Header), Höhe/Padding von dort übernommen.
+  Titel ("Data & AI Projects", Uppercase, 4rem) + Subline + KPI-Row bleiben
+  bewusst außerhalb des Headers, eigener Block mit großem Abstand darunter.
+- Lektion aus dieser Iteration: mehrfach zu viel eigenständig entschieden
+  (Copy, Farben, wann gepusht wird) — siehe Memory `feedback_autonomy_boundaries_live_deploys`.
+  Ab jetzt: Änderungen vor Commit/Push im Preview zeigen, Copy/Zahlen/Design
+  nicht selbst erfinden.
+- Komplette Content-Überarbeitung nach Kays Abschnitt-für-Abschnitt-Briefing:
+  KPI-Row jetzt 5 Werte (DE/DS/DA-Projektzahl + max. Datensätze + max. ML-Runs,
+  DA aktuell ehrlich bei 0). Projektkarten-Struktur getauscht (view-label =
+  Projektname, h3 = Projektziel, Badge = volle Disziplin statt Abkürzung),
+  5. Karte (AI Dev Toolchain, Badge "Business Intelligence") als Platzhalter
+  für ein noch kommendes Projekt ergänzt — Text wird aktualisiert sobald das
+  Projekt da ist. "Mein Data-Approach" (E9) ersetzt durch 3-spaltige
+  "Data-to-Value Approach"-Struktur (Business Understanding / Data & Technology
+  / Business Impact). "Mein Analytics-Workflow" (E8) ersetzt durch 7-stufige
+  CRISP-DM-Timeline, letzter Schritt farblich hervorgehoben. Tooling-Grid um
+  DuckDB und Folium bereinigt (kein aktives Projekt nutzt sie). Ressourcen-Grid
+  auf 5 Spalten (GitHub/LinkedIn/Xing/Mail/Telefon), Footer auf reine
+  Kurzzeile reduziert.
+- Nächster Schritt: 5. Projektkarte mit echtem Case aktualisieren sobald verfügbar.

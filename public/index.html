@@ -9,7 +9,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data & AI Project Overview — Kay Wiegand</title>
+  <title>Data & AI Projects — Kay Wiegand</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -32,26 +32,23 @@
       color: var(--ink); line-height: 1.6; background: var(--bg);
     }
 
-    /* ─── Header ── nur Logo + Kontakt, analog Cover-Letter-Briefkopf ── */
+    /* ─── Header — NUR Logo + Kontakt, alles untereinander, dunkel ── */
     header {
-      background: #fff; border-bottom: 1px solid var(--card-border);
-      padding: 2.2rem 2rem;
+      background: #3E4A5C; color: #fff;
+      padding: 4rem 2rem 3.5rem;
     }
     .header-inner { max-width: 900px; margin: 0 auto; }
-    .identity-row { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
-    .identity-row img { height: 46px; width: auto; }
-    .identity-text { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.5; }
-    .identity-text strong { color: var(--ink); font-weight: 700; }
-    .identity-text a { color: var(--ink-soft); text-decoration: none; }
-    .identity-text a:hover { color: var(--accent); }
+    header img.logo { height: 52px; width: auto; margin-bottom: 1.6rem; }
+    header .identity-text { font-size: 0.95rem; line-height: 1.7; }
+    header .identity-text a { color: inherit; text-decoration: none; }
+    header .identity-text a:hover { text-decoration: underline; }
 
-    /* ─── Hero — Titel/Sublines/KPIs, mit großzügigem Abstand zum Briefkopf ── */
-    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 2rem 3rem; }
-    .hero h1 { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 3rem; color: var(--ink); margin-bottom: 0.6rem; letter-spacing: -0.01em; }
-    .hero .tagline  { font-size: 1.05rem; font-weight: 700; color: var(--accent); margin-bottom: 0.2rem; }
-    .hero .subtitle { font-size: 0.95rem; color: var(--ink-body); margin-bottom: 0; }
+    /* ─── Hero — Titel/Subline/KPIs, separat mit großzügigem Abstand ── */
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 2rem 0; }
+    .hero h1 { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 4rem; text-transform: uppercase; color: var(--ink); margin-bottom: 0.8rem; letter-spacing: -0.01em; }
+    .hero .subtitle { font-size: 1rem; color: var(--ink-body); max-width: 70ch; }
 
-    .kpi-row { display: flex; gap: 30px; flex-wrap: wrap; margin-top: 3rem; border-top: 3px solid var(--accent); padding-top: 2rem; }
+    .kpi-row { display: flex; gap: 30px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
     .kpi { border-left: 3px solid var(--card-border); padding-left: 14px; text-align: left; }
     .kpi.accent { border-left-color: var(--accent); }
     .kpi .v { font-size: 1.6rem; font-weight: 900; color: var(--ink); line-height: 1; }
@@ -90,16 +87,14 @@
     .view-card .view-desc { font-size: 0.85rem; color: var(--ink-body); margin-bottom: 14px; line-height: 1.5; flex-grow: 1; }
     .view-badge { font-size: 0.7rem; font-weight: 700; padding: 3px 9px; border-radius: 4px; background: #fff; color: var(--accent); }
 
-    /* ─── E9 — H-Timeline + Text ─────────────── */
-    .h-timeline { display: flex; flex-direction: column; gap: 20px; margin-top: 1.4rem; }
-    .ht-line-row { position: relative; display: flex; }
-    .ht-line-row::before { content: ""; position: absolute; top: 7px; left: 0; right: 0; height: 1px; background: var(--card-border); }
-    .ht-dot-wrap { flex: 1; display: flex; justify-content: center; }
-    .ht-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); position: relative; z-index: 1; }
-    .ht-labels { display: flex; }
-    .ht-label { flex: 1; text-align: center; padding: 0 10px; }
-    .ht-label h4 { font-size: 0.95rem; font-weight: 700; color: var(--ink); margin: 0 0 0.35em; }
-    .ht-label p { font-size: 0.8rem; color: var(--ink-body); margin: 0; line-height: 1.5; }
+    /* ─── Data-to-Value Approach — 3 Spalten ─────────────── */
+    .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 1.4rem; }
+    @media (max-width: 760px) { .approach-grid { grid-template-columns: 1fr; } }
+    .approach-col h4 { font-size: 0.95rem; font-weight: 700; color: var(--ink); margin-bottom: 0.8rem; }
+    .approach-col ul { list-style: none; }
+    .approach-col li { font-size: 0.85rem; color: var(--ink-body); padding: 0.6rem 0; border-top: 1px solid var(--card-border); line-height: 1.4; }
+    .approach-col li:first-child { border-top: none; }
+    .approach-col .flow-line { font-size: 0.9rem; color: var(--accent); font-weight: 700; }
     .extra-text { margin-top: 1.6rem; }
     .extra-text p { font-size: 0.9rem; color: var(--ink-body); line-height: 1.6; margin: 0; max-width: 72ch; }
 
@@ -112,6 +107,7 @@
     .timeline::before { content: ""; position: absolute; left: 17px; top: 8px; bottom: 8px; width: 1px; background: var(--card-border); }
     .tl-item { position: relative; display: flex; gap: 14px; align-items: center; z-index: 1; }
     .tl-num { width: 34px; height: 34px; border-radius: 9px; background: #fff; border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; color: var(--accent); flex: none; }
+    .tl-num.highlight { background: var(--accent); color: #fff; }
     .tl-item h4 { font-size: 0.9rem; font-weight: 700; color: var(--ink); margin: 0; }
 
     /* ─── E6 — Box-Grid ───────────────────────── */
@@ -122,7 +118,7 @@
     .box-item .bi-tools { font-size: 0.85rem; color: var(--ink-body); }
 
     /* ─── Quick Links ─────────────────────────── */
-    .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 1.4rem; }
+    .links-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(157px, 1fr)); gap: 12px; margin-top: 1.4rem; }
     .quick-link {
       display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: var(--radius);
       text-decoration: none; color: var(--accent); background: var(--card);
@@ -141,37 +137,49 @@
 
 <header>
   <div class="header-inner">
-    <div class="identity-row">
-      <img src="img/logo-k.png" alt="Kay Wiegand Logo">
-      <div class="identity-text">
-        <strong>Kay Alexander Wiegand</strong> — Applied Data Analyst | Technology Consultant | Dipl.-Ing. (FH) Medieninformatik<br>
-        Berlin · <a href="tel:+4915202907948">+49 152 029 079 48</a> · <a href="mailto:hey@kaywiegand.de">hey@kaywiegand.de</a>
-      </div>
-    </div>
+    <img class="logo" src="img/logo-k-white.png" alt="Kay Wiegand Logo">
+    <p class="identity-text">
+      Kay Alexander Wiegand
+      <br>
+      <strong>Applied Data Analyst | Technology Consultant</strong>
+      <br>
+      Dipl.-Ing. (FH) Medieninformatik
+      <br><br>
+      <br>
+      Berlin
+      <br>
+      <a href="tel:+4915202907948">+49 152 029 079 48</a>
+      <br>
+      <a href="mailto:hey@kaywiegand.de">hey@kaywiegand.de</a>
+    </p>
   </div>
 </header>
 
 <div class="hero">
-  <h1>Data & AI Project Overview</h1>
-  <p class="tagline">Portfolio-Hub für Data-Projekte</p>
-  <p class="subtitle">Data Engineering · Data Science · Data Analysis | 2025–2026</p>
-  <div class="kpi-row">
-    <div class="kpi">
-      <div class="v">2</div>
-      <div class="l">Data-Science-Projekte</div>
-    </div>
-    <div class="kpi">
-      <div class="v">1</div>
-      <div class="l">Data-Engineering-Projekt</div>
-    </div>
-    <div class="kpi accent">
-      <div class="v">94 M+</div>
-      <div class="l">Zeilen im größten Master-Datensatz</div>
-    </div>
-    <div class="kpi">
-      <div class="v">448</div>
-      <div class="l">Modell-Runs im größten Experimentierframework</div>
-    </div>
+  <h1>Data & AI Projects</h1>
+  <p class="subtitle">Data Engineering · Data Analysis · Data Science · Artificial Intelligence | 2025–2026</p>
+</div>
+
+<div class="kpi-row">
+  <div class="kpi">
+    <div class="v">1</div>
+    <div class="l">Data-Engineering-Projekt</div>
+  </div>
+  <div class="kpi">
+    <div class="v">2</div>
+    <div class="l">Data-Science-Projekte</div>
+  </div>
+  <div class="kpi">
+    <div class="v">0</div>
+    <div class="l">Data-Analysis-Projekte</div>
+  </div>
+  <div class="kpi accent">
+    <div class="v">94 M+</div>
+    <div class="l">Max. Datensätze in einem Projekt</div>
+  </div>
+  <div class="kpi">
+    <div class="v">448</div>
+    <div class="l">Max. ML-Model-Runs in einem Projekt</div>
   </div>
 </div>
 
@@ -183,12 +191,12 @@
     <h2>Einleitung zur Projektübersicht</h2>
     <div class="about-grid">
       <div class="about-col">
-        <div class="about-item"><strong>Über mich</strong>Applied Data Analyst / Data Scientist mit 15+ Jahren Erfahrung in digitalen Projekten. Nach gezielter Spezialisierung (StackFuel: Python, SQL, Power BI, ML) verbinde ich frisches Data-Handwerk mit Projekt-, Beratungs- und Branchenerfahrung.</div>
-        <div class="about-item"><strong>Ziel dieses Hubs</strong>Ein Link für Bewerbungen und Gespräche, der direkt auf fertig aufbereitete Cases zeigt — statt auf verstreute Repos.</div>
+        <div class="about-item"><strong>Über mich</strong>Applied Data Analyst &amp; Technology Consultant mit 15+ Jahren Erfahrung in digitalen Projekten. Durch meine gezielte Data-Spezialisierung verbinde ich jahrelange Praxis in Engineering, Consulting und Produktentwicklung mit modernem Data-Handwerk (Python, SQL, Power BI, Machine Learning).</div>
+        <div class="about-item"><strong>Ziel dieses Hubs</strong>Ein zentraler Showcase für Bewerbungen und Fachgespräche – statt verstreuter Repositories zeigt dieser Hub direkt fertig aufbereitete, production-ready Cases.</div>
       </div>
       <div class="about-col">
-        <div class="about-item"><strong>Arbeitsweise</strong>Jedes Projekt dokumentiert Problem, Ansatz und Ergebnis nachvollziehbar. Code und Notebooks reproduzierbar, jede Entscheidung begründet.</div>
-        <div class="about-item"><strong>Ausblick</strong>Es kommen laufend weitere Projekte dazu, das Tooling und der AI-Workflow dahinter wachsen parallel mit (siehe Meta-Case unten).</div>
+        <div class="about-item"><strong>Arbeitsweise</strong>Jedes Projekt dokumentiert Problem, methodischen Ansatz und messbaren Business Impact nachvollziehbar. Der Code ist in Jupyter Notebooks reproduzierbar, jede architektonische und analytische Entscheidung transparent begründet.</div>
+        <div class="about-item"><strong>Ausblick</strong>Dieses Portfolio wächst kontinuierlich weiter. Auch mein Tooling und die zugrundeliegenden AI-Workflows entwickeln sich parallel dazu dynamisch mit (Einblicke dazu im Meta-Case unten).</div>
       </div>
     </div>
   </section>
@@ -201,72 +209,89 @@
 
     <div class="view-grid">
       <a href="https://kaywiegand.github.io/zh-tram-flow/" class="view-card" target="_blank">
-        <div class="view-label">Data Science</div>
-        <h3>Zurich Tram Flow</h3>
+        <div class="view-label">Zurich Tram Flow</div>
+        <h3>Verspätungsvorhersage</h3>
         <p class="view-desc">Verspätungsvorhersage im Zürcher Tramnetz — vom Rohdatensatz zum ML-Modell mit Dashboard.</p>
-        <div class="view-badge">DS</div>
+        <div class="view-badge">Data Science</div>
       </a>
       <a href="https://kaywiegand.github.io/zh-tram-data/" class="view-card" target="_blank">
-        <div class="view-label">Data Engineering</div>
-        <h3>Zurich Tram Data</h3>
+        <div class="view-label">Zurich Tram Data</div>
+        <h3>Engineering Pipeline</h3>
         <p class="view-desc">Master-Datensatz-Pipeline: 38 GB Rohdaten → 94,4 M Halt-Ereignisse, 5 Quellen vereint.</p>
-        <div class="view-badge">DE</div>
+        <div class="view-badge">Data Engineering</div>
       </a>
       <a href="https://kaywiegand.github.io/us-used-vehicle-resales/" class="view-card" target="_blank">
-        <div class="view-label">Data Science</div>
-        <h3>US Used Vehicle Resales</h3>
+        <div class="view-label">US Used Vehicle Resales</div>
+        <h3>Bad-Buy Prediction</h3>
         <p class="view-desc">Bad-Buy Prediction — Fehlkäufe vor dem Kauf erkennen, 448-Runs-Experimentierframework.</p>
-        <div class="view-badge">DS</div>
+        <div class="view-badge">Data Science</div>
       </a>
       <a href="https://github.com/kaywiegand/wgnd-ai-dev-toolchain" class="view-card" target="_blank">
-        <div class="view-label">Meta / Process</div>
-        <h3>AI Dev Toolchain</h3>
-        <p class="view-desc">Wie Scaffolding, Toolkit und Claude-Code-Skills zusammen Projekt-Bootstrap, Review und Portfolio-Aufbereitung automatisieren.</p>
-        <div class="view-badge">Tooling</div>
+        <div class="view-label">AI DEV Toolchain</div>
+        <h3>Automated AI Workflow</h3>
+        <p class="view-desc">Automated Project Bootstrap mit intelligenten Code-Reviews bis hin zur Portfolio-Aufbereitung. Workflow mit AI Claude-Code-Skills und Python Scaffolding und Toolkit.</p>
+        <div class="view-badge">Tooling / Process</div>
+      </a>
+      <a href="https://github.com/kaywiegand/wgnd-ai-dev-toolchain" class="view-card" target="_blank">
+        <div class="view-label">AI DEV Toolchain</div>
+        <h3>Automated AI Workflow</h3>
+        <p class="view-desc">Automated Project Bootstrap mit intelligenten Code-Reviews bis hin zur Portfolio-Aufbereitung. Workflow mit AI Claude-Code-Skills und Python Scaffolding und Toolkit.</p>
+        <div class="view-badge">Business Intelligence</div>
       </a>
     </div>
   </section>
 
-  <!-- ─── Data-Approach — E9 H-Timeline + Text ─────────────── -->
+  <!-- ─── Data-to-Value Approach ─────────────── -->
   <section>
     <div class="section-label">Vorgehen</div>
-    <h2>Mein Data-Approach</h2>
-    <div class="h-timeline">
-      <div class="ht-line-row">
-        <div class="ht-dot-wrap"><div class="ht-dot"></div></div>
-        <div class="ht-dot-wrap"><div class="ht-dot"></div></div>
-        <div class="ht-dot-wrap"><div class="ht-dot"></div></div>
-        <div class="ht-dot-wrap"><div class="ht-dot"></div></div>
+    <h2>Data-to-Value Approach</h2>
+    <div class="approach-grid">
+      <div class="approach-col">
+        <h4>Business Understanding</h4>
+        <ul>
+          <li>Business Problems &amp; Processes</li>
+          <li>Systems &amp; Data Landscape</li>
+          <li>Data Strategy &amp; Governance</li>
+        </ul>
       </div>
-      <div class="ht-labels">
-        <div class="ht-label"><h4>Explore</h4><p>Rohdaten und Kontext verstehen, bevor irgendetwas reduziert wird.</p></div>
-        <div class="ht-label"><h4>Prepare</h4><p>Bereinigen, reduzieren, auf das Relevante fokussieren.</p></div>
-        <div class="ht-label"><h4>Analyze</h4><p>Modellieren, Muster prüfen, Ergebnisse einordnen.</p></div>
-        <div class="ht-label"><h4>Communicate</h4><p>Storytelling für unterschiedliche Zielgruppen, portfolio-fertig aufbereitet.</p></div>
+      <div class="approach-col">
+        <h4>Data &amp; Technology</h4>
+        <ul>
+          <li>Data Architecture &amp; Integration</li>
+          <li>Analytics &amp; Data Science</li>
+          <li>POC, MVP, Prototypes &amp; Solutions</li>
+        </ul>
+      </div>
+      <div class="approach-col">
+        <h4>Business Impact</h4>
+        <ul>
+          <li class="flow-line">Insights → Decisions → Value</li>
+        </ul>
       </div>
     </div>
     <div class="extra-text">
-      <p>Jedes Projekt durchläuft diese vier Phasen — Reihenfolge und Tiefe unterscheiden sich je nach Datenlage, aber die Struktur bleibt gleich, dokumentiert in nummerierten Notebooks (00–06).</p>
+      <p>Mein technisches Fundament aus Engineering, Consulting und digitaler Produktentwicklung versetzt mich in die Lage, diesen gesamten strategischen Ansatz von der ersten Business-Fragestellung bis hin zur strategischen Umsetzung zu begleiten. Der Fokus liegt dabei stets auf dem messbaren Business Value. Fundiert wird dieser Ansatz durch meine Weiterbildung in Data Science &amp; Machine Learning, Python &amp; Software Engineering, Datenbanken &amp; SQL sowie Business Intelligence &amp; Analytics.</p>
     </div>
   </section>
 
-  <!-- ─── Analytics-Workflow — E8 Timeline (L6) + Copy rechts ─────────────── -->
+  <!-- ─── Data Analytics Workflow (~CRISP-DM) ─────────────── -->
   <section>
     <div class="section-label">Umsetzung</div>
-    <h2>Mein Analytics-Workflow</h2>
+    <h2>Data Analytics Workflow (~CRISP-DM)</h2>
     <div class="g12">
       <div class="g12-tl">
         <div class="timeline">
-          <div class="tl-item"><div class="tl-num">1</div><h4>Scaffold</h4></div>
-          <div class="tl-item"><div class="tl-num">2</div><h4>Explore &amp; Clean</h4></div>
-          <div class="tl-item"><div class="tl-num">3</div><h4>Enrich &amp; Engineer</h4></div>
-          <div class="tl-item"><div class="tl-num">4</div><h4>Model &amp; Validate</h4></div>
-          <div class="tl-item"><div class="tl-num">5</div><h4>Package &amp; Present</h4></div>
+          <div class="tl-item"><div class="tl-num">1</div><h4>Business Understanding</h4></div>
+          <div class="tl-item"><div class="tl-num">2</div><h4>Data Understanding &amp; Exploration (EDA)</h4></div>
+          <div class="tl-item"><div class="tl-num">3</div><h4>Data Preparation (ETL/ELT, Data Cleaning, Transformation)</h4></div>
+          <div class="tl-item"><div class="tl-num">4</div><h4>Analysis &amp; Modeling (Feature Engineering, Evaluation)</h4></div>
+          <div class="tl-item"><div class="tl-num">5</div><h4>Visualization &amp; Communication of Insights</h4></div>
+          <div class="tl-item"><div class="tl-num">6</div><h4>Business Recommendations &amp; Value</h4></div>
+          <div class="tl-item"><div class="tl-num highlight">7</div><h4>Iteration &amp; Continuous Improvement</h4></div>
         </div>
       </div>
       <div class="g12-copy extra-text" style="margin-top: 0;">
-        <p>Wiederkehrende, deterministische Schritte — Ordnerstruktur, Boilerplate, Standard-Dokumentation — übernehmen eigene Scaffolding-Tools.</p>
-        <p>Beurteilungs-Schritte — ist die Story kohärent, ist der Code wirklich portfolio-reif, welche Slides passen wohin — übernehmen Claude-Code-Skills, die den tatsächlichen Inhalt bewerten statt nur Vorlagen zu füllen. Mehr dazu im AI-Dev-Toolchain-Case oben.</p>
+        <p>Praktische Anwendung des vollständigen Data Analytics Lifecycles – von der Datengewinnung und -aufbereitung über Exploration und Visualisierung bis zur Analyse und Bewertung datenbasierter Ansätze. Im Rahmen meiner Data-Spezialisierung habe ich Workflows mit ETL/ELT, Data Cleaning, Exploratory Data Analysis (EDA), statistischer Analyse und ersten Machine-Learning-Ansätzen umgesetzt. Dabei nutze ich Python, SQL, Jupyter Notebooks und gängige Analytics-Tools wie Pandas, NumPy, Matplotlib, Seaborn, Plotly, Scikit-learn und Power BI.</p>
       </div>
     </div>
   </section>
@@ -279,8 +304,8 @@
     <div class="box-grid">
       <div class="box-item"><div class="bi-title">Python-Kern</div><div class="bi-tools">pandas · NumPy · Polars</div></div>
       <div class="box-item"><div class="bi-title">Machine Learning</div><div class="bi-tools">scikit-learn · LightGBM</div></div>
-      <div class="box-item"><div class="bi-title">Datenbank &amp; BI</div><div class="bi-tools">SQL/PostgreSQL · DuckDB · Power BI</div></div>
-      <div class="box-item"><div class="bi-title">Visualisierung</div><div class="bi-tools">Plotly · Matplotlib/Seaborn · Folium</div></div>
+      <div class="box-item"><div class="bi-title">Datenbank &amp; BI</div><div class="bi-tools">SQL/PostgreSQL · Power BI</div></div>
+      <div class="box-item"><div class="bi-title">Visualisierung</div><div class="bi-tools">Plotly · Matplotlib/Seaborn</div></div>
       <div class="box-item"><div class="bi-title">Geo &amp; Spatial</div><div class="bi-tools">GeoPandas · Shapely</div></div>
       <div class="box-item"><div class="bi-title">Dashboard &amp; Deploy</div><div class="bi-tools">Streamlit · GitHub Actions/Pages</div></div>
       <div class="box-item highlight"><div class="bi-title">AI-Dev-Workflow</div><div class="bi-tools">Claude Code · eigene Skills (wgnd-skills, wgnd-toolkit/-scaffolding)</div></div>
@@ -291,7 +316,7 @@
   <section>
     <div class="section-label">Weitere Ressourcen</div>
     <h2>Accounts &amp; Profile</h2>
-    <p class="section-intro">Gerne connecten und Kontakt aufnehmen.</p>
+    <p class="section-intro">Bei Fragen, Ideen oder für einen kurzen Austausch – gerne einfach melden!</p>
     <div class="links-grid">
       <a href="https://github.com/kaywiegand" class="quick-link" target="_blank">GitHub</a>
       <a href="https://www.linkedin.com/in/kaywiegand/" class="quick-link" target="_blank">LinkedIn</a>
@@ -304,10 +329,7 @@
 </main>
 
 <footer>
-  <p>
-    Kay Alexander Wiegand — Data &amp; AI Project Overview |
-    <a href="https://github.com/kaywiegand/kw-data-portfolio" target="_blank">Volle Portfolio-Site (in Aufbau, löst diesen Hub unter data.kaywiegand.de später ab)</a>
-  </p>
+  <p>Kay Alexander Wiegand | Data &amp; AI Projects 2025-2026</p>
 </footer>
 
 </body>
