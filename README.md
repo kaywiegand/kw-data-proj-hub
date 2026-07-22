@@ -33,4 +33,6 @@ GitHub Pages aus `public/`.
 
 ## Live
 
-→ https://kaywiegand.github.io/kw-data-proj-hub/
+→ **https://data.kaywiegand.de** (primär, während der Bewerbungsphase — Custom
+  Domain bewusst hierher umgezogen, siehe PROCESS_LOG)
+→ https://kaywiegand.github.io/kw-data-proj-hub/ (GitHub-Pages-Standard-URL)

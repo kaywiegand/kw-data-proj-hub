@@ -47,3 +47,9 @@ Metriken, Findings, Outputs gehören in Notebooks/Code — nicht hier.
   inkl. Timeline-/Box-Grid-Umbruch geprüft).
 - Nächster Schritt: committen, pushen, Kay-Review abwarten (offene Punkte:
   KPI-Zählweise DA-Projekte, Textlänge Approach/Workflow-Sektionen).
+- **Custom Domain `data.kaywiegand.de` bewusst hierher umgezogen** (Kay-Entscheidung,
+  nicht versehentlich): für die Bewerbungsphase soll der Hub unter der Haupt-Domain
+  laufen, da er sofort nutzbar ist. `kw-data-portfolio` bleibt als Repo/Code bestehen,
+  hat aber bis auf Weiteres keine aktive Custom Domain mehr. Wird zurückgetauscht,
+  sobald `kw-data-portfolio` fertig ist. Footer-Link "Volle Portfolio-Site" zeigt
+  deshalb auf den GitHub-Repo statt auf `data.kaywiegand.de` (sonst zirkulär).
