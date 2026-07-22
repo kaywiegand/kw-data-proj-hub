@@ -95,9 +95,12 @@
     .ht-dot-wrap { flex: 1; display: flex; justify-content: center; }
     .ht-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); position: relative; z-index: 1; }
 
-    /* ─── Data-to-Value Approach — 3 Spalten ─────────────── */
-    .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 1.8rem; }
-    @media (max-width: 760px) { .approach-grid { grid-template-columns: 1fr; } }
+    /* ─── Data-to-Value Approach — 3 Spalten, Mittelpunkt = Timeline-Punkt ── */
+    .approach-grid { display: flex; margin-top: 1.8rem; }
+    @media (max-width: 760px) { .approach-grid { flex-direction: column; } }
+    .approach-col { flex: 1; display: flex; justify-content: center; }
+    .approach-col-inner { max-width: 210px; width: 100%; }
+    @media (max-width: 760px) { .approach-col-inner { max-width: none; } }
     .approach-col h4 { font-size: 0.95rem; font-weight: 700; color: var(--ink); margin-bottom: 0.8rem; }
     .approach-col ul { list-style: none; }
     .approach-col li { font-size: 0.85rem; color: var(--ink-body); padding: 0.6rem 0; border-top: 1px solid var(--card-border); line-height: 1.4; }
@@ -263,26 +266,32 @@
     </div>
     <div class="approach-grid">
       <div class="approach-col">
-        <h4>Business Understanding</h4>
-        <ul>
-          <li>Business Problems &amp; Processes</li>
-          <li>Systems &amp; Data Landscape</li>
-          <li>Data Strategy &amp; Governance</li>
-        </ul>
+        <div class="approach-col-inner">
+          <h4>Business Understanding</h4>
+          <ul>
+            <li>Business Problems &amp; Processes</li>
+            <li>Systems &amp; Data Landscape</li>
+            <li>Data Strategy &amp; Governance</li>
+          </ul>
+        </div>
       </div>
       <div class="approach-col">
-        <h4>Data &amp; Technology</h4>
-        <ul>
-          <li>Data Architecture &amp; Integration</li>
-          <li>Analytics &amp; Data Science</li>
-          <li>POC, MVP, Prototypes &amp; Solutions</li>
-        </ul>
+        <div class="approach-col-inner">
+          <h4>Data &amp; Technology</h4>
+          <ul>
+            <li>Data Architecture &amp; Integration</li>
+            <li>Analytics &amp; Data Science</li>
+            <li>POC, MVP, Prototypes &amp; Solutions</li>
+          </ul>
+        </div>
       </div>
       <div class="approach-col">
-        <h4>Business Impact</h4>
-        <ul>
-          <li class="flow-line">Insights → Decisions → Value</li>
-        </ul>
+        <div class="approach-col-inner">
+          <h4>Business Impact</h4>
+          <ul>
+            <li class="flow-line">Insights → Decisions → Value</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="extra-text full-width">
