@@ -69,13 +69,13 @@
     h2 { font-size: 1.4rem; font-weight: 700; color: var(--ink); margin-bottom: 0.5rem; }
     .section-intro { font-size: 0.92rem; color: var(--ink-body); margin-bottom: 2em; line-height: 1.6; }
 
-    /* ─── Section-Nav — Tab-Bar mit Grundlinie, Akzent-Unterstrich pro Link beim Hover ── */
-    .section-nav { margin-top: 2rem; border-bottom: 1px solid var(--card-border); }
-    .section-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1.8rem; }
-    .section-nav a { position: relative; display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--ink-soft); text-decoration: none; padding-bottom: 12px; }
-    .section-nav a::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
-    .section-nav a:hover { color: var(--ink); }
-    .section-nav a:hover::after { transform: scaleX(1); }
+    /* ─── Fixed-Nav — rechtsbündig, vertikal zentriert, aktive Section hervorgehoben ── */
+    .fixed-nav { position: fixed; right: 2rem; top: 50%; transform: translateY(-50%); z-index: 20; }
+    .fixed-nav ul { list-style: none; display: flex; flex-direction: column; gap: 1rem; text-align: right; }
+    .fixed-nav a { font-size: 0.75rem; font-weight: 700; color: var(--ink-soft); text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s ease; }
+    .fixed-nav a:hover { color: var(--ink); }
+    .fixed-nav a.active { color: var(--accent); }
+    @media (max-width: 1150px) { .fixed-nav { display: none; } }
 
     .about-grid { display: flex; gap: 3rem; margin-top: 1.2rem; }
     .about-col { flex: 1; min-width: 0; }
@@ -178,51 +178,47 @@
   </div>
 </header>
 
+<nav class="fixed-nav">
+  <ul>
+    <li><a href="#kontext">Kontext</a></li>
+    <li><a href="#projektuebersicht">Projektübersicht</a></li>
+    <li><a href="#vorgehen">Vorgehen</a></li>
+    <li><a href="#umsetzung">Umsetzung</a></li>
+    <li><a href="#tooling">Tooling</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
+
 <div class="hero">
   <h1>Data & AI Projects</h1>
-  <p class="subtitle">Data Engineering — Data Analysis — Data Science — Artificial Intelligence | 2025–2026</p>
+  <p class="subtitle">Data Engineering — Data Analysis — Data Science — Artificial Intelligence</p>
+  <p class="subtitle">Kontext · Projektübersicht · Vorgehen · Umsetzung · Kontakt</p>
+  <p class="subtitle">Spannende Kennzahlen auf einen Blick</p>
+  <div class="kpi-row">
+    <div class="kpi accent">
+      <div class="v">94 M+</div>
+      <div class="l">Max. Datensätze in einem Projekt</div>
+    </div>
+    <div class="kpi">
+      <div class="v">448</div>
+      <div class="l">Max. ML-Model-Runs in einem Projekt</div>
+    </div>
+    <div class="kpi">
+      <div class="v">1</div>
+      <div class="l">Data-Engineering-Projekt</div>
+    </div>
+    <div class="kpi">
+      <div class="v">2</div>
+      <div class="l">Data-Science-Projekte</div>
+    </div>
+    <div class="kpi">
+      <div class="v">0</div>
+      <div class="l">Data-Analysis-Projekte</div>
+    </div>
+  </div>
 </div>
 
 <main>
-
-  <!-- ─── Schnelleinstieg — KPIs + Sprungnavigation ─────────────── -->
-  <section id="schnelleinstieg">
-    <div class="section-label">Schnelleinstieg</div>
-    <h2>Spannende Zahlen und direkte Links</h2>
-    <p class="section-intro">Interessante Kennzahlen auf einen Blick — und von hier direkt zum gewünschten Thema springen.</p>
-    <div class="kpi-row">
-      <div class="kpi">
-        <div class="v">1</div>
-        <div class="l">Data-Engineering-Projekt</div>
-      </div>
-      <div class="kpi">
-        <div class="v">2</div>
-        <div class="l">Data-Science-Projekte</div>
-      </div>
-      <div class="kpi">
-        <div class="v">0</div>
-        <div class="l">Data-Analysis-Projekte</div>
-      </div>
-      <div class="kpi accent">
-        <div class="v">94 M+</div>
-        <div class="l">Max. Datensätze in einem Projekt</div>
-      </div>
-      <div class="kpi">
-        <div class="v">448</div>
-        <div class="l">Max. ML-Model-Runs in einem Projekt</div>
-      </div>
-    </div>
-    <nav class="section-nav">
-      <ul>
-        <li><a href="#kontext">Kontext</a></li>
-        <li><a href="#projektuebersicht">Projektübersicht</a></li>
-        <li><a href="#vorgehen">Vorgehen</a></li>
-        <li><a href="#umsetzung">Umsetzung</a></li>
-        <li><a href="#tooling">Tooling</a></li>
-        <li><a href="#ressourcen">Weitere Ressourcen</a></li>
-      </ul>
-    </nav>
-  </section>
 
   <!-- ─── Einleitung ─────────────────────────── -->
   <section id="kontext">
@@ -375,9 +371,9 @@
     </div>
   </section>
 
-  <!-- ─── Weitere Ressourcen ─────────────────────── -->
-  <section id="ressourcen">
-    <div class="section-label">Weitere Ressourcen</div>
+  <!-- ─── Kontakt ─────────────────────── -->
+  <section id="kontakt">
+    <div class="section-label">Kontakt</div>
     <h2>Accounts &amp; Profile</h2>
     <p class="section-intro">Bei Fragen, Ideen oder für einen kurzen Austausch – gerne einfach melden!</p>
     <div class="links-grid">
@@ -394,6 +390,29 @@
 <footer>
   <p>Kay Alexander Wiegand | Data &amp; AI Projects 2025-2026</p>
 </footer>
+
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.fixed-nav a'));
+  var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+
+  function updateActive() {
+    var mid = window.innerHeight / 2;
+    var current = null;
+    sections.forEach(function (s, i) {
+      if (!s) return;
+      var r = s.getBoundingClientRect();
+      if (r.top <= mid && r.bottom >= mid) current = links[i];
+    });
+    links.forEach(function (l) { l.classList.remove('active'); });
+    if (current) current.classList.add('active');
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  window.addEventListener('resize', updateActive);
+  updateActive();
+})();
+</script>
 
 </body>
 </html>
