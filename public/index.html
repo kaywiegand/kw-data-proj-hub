@@ -50,7 +50,7 @@
     .hero h1 { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 4rem; text-transform: uppercase; color: var(--ink); margin-bottom: 0.8rem; letter-spacing: -0.01em; }
     .hero .subtitle { font-size: 1rem; color: var(--ink-body); max-width: 70ch; margin-bottom: 0.5rem; }
 
-    .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; max-width: 900px; margin: 8rem auto 0; padding: 0 2rem; }
+    .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
     @media (max-width: 760px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } }
     .kpi { border-left: 3px solid var(--card-border); padding-left: 14px; text-align: left; min-width: 0; }
     .kpi.accent { border-left-color: var(--accent); }
@@ -61,7 +61,6 @@
     /* ─── Main rhythm — einheitlich 8rem Abstand zwischen allen Blöcken ── */
     main { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
     section { margin-top: 8rem; }
-    main > section:first-child { margin-top: 4rem; }
 
     .section-label {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
@@ -71,8 +70,8 @@
     .section-intro { font-size: 0.92rem; color: var(--ink-body); margin-bottom: 2em; line-height: 1.6; }
 
     /* ─── Section-Nav — schlicht, springt per Anchor zu den Sections ── */
-    .section-nav { max-width: 900px; margin: 4rem auto; padding: 0 2rem; }
-    .section-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4em; justify-content: center; }
+    .section-nav { margin-top: 2rem; }
+    .section-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4em; }
     .section-nav li:not(:last-child)::after { content: "·"; margin-left: 0.4em; color: var(--card-border); }
     .section-nav a { font-size: 0.8rem; font-weight: 700; color: var(--ink-soft); text-decoration: none; }
     .section-nav a:hover { color: var(--accent); }
@@ -181,44 +180,48 @@
 <div class="hero">
   <h1>Data & AI Projects</h1>
   <p class="subtitle">Data Engineering — Data Analysis — Data Science — Artificial Intelligence | 2025–2026</p>
-  <p class="subtitle">Kontext · Projektübersicht ·&nbsp;Vorgehen · Umsetzung · Tooling · Tech-Stack</p>
 </div>
-
-<div class="kpi-row">
-  <div class="kpi">
-    <div class="v">1</div>
-    <div class="l">Data-Engineering-Projekt</div>
-  </div>
-  <div class="kpi">
-    <div class="v">2</div>
-    <div class="l">Data-Science-Projekte</div>
-  </div>
-  <div class="kpi">
-    <div class="v">0</div>
-    <div class="l">Data-Analysis-Projekte</div>
-  </div>
-  <div class="kpi accent">
-    <div class="v">94 M+</div>
-    <div class="l">Max. Datensätze in einem Projekt</div>
-  </div>
-  <div class="kpi">
-    <div class="v">448</div>
-    <div class="l">Max. ML-Model-Runs in einem Projekt</div>
-  </div>
-</div>
-
-<nav class="section-nav">
-  <ul>
-    <li><a href="#kontext">Kontext</a></li>
-    <li><a href="#projektuebersicht">Projektübersicht</a></li>
-    <li><a href="#vorgehen">Vorgehen</a></li>
-    <li><a href="#umsetzung">Umsetzung</a></li>
-    <li><a href="#tooling">Tooling</a></li>
-    <li><a href="#ressourcen">Weitere Ressourcen</a></li>
-  </ul>
-</nav>
 
 <main>
+
+  <!-- ─── Schnelleinstieg — KPIs + Sprungnavigation ─────────────── -->
+  <section id="schnelleinstieg">
+    <div class="section-label">Schnelleinstieg</div>
+    <h2>Auf einen Blick</h2>
+    <p class="section-intro">Spannende Kennzahlen auf einen Blick — und von hier direkt zum gewünschten Thema springen.</p>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="v">1</div>
+        <div class="l">Data-Engineering-Projekt</div>
+      </div>
+      <div class="kpi">
+        <div class="v">2</div>
+        <div class="l">Data-Science-Projekte</div>
+      </div>
+      <div class="kpi">
+        <div class="v">0</div>
+        <div class="l">Data-Analysis-Projekte</div>
+      </div>
+      <div class="kpi accent">
+        <div class="v">94 M+</div>
+        <div class="l">Max. Datensätze in einem Projekt</div>
+      </div>
+      <div class="kpi">
+        <div class="v">448</div>
+        <div class="l">Max. ML-Model-Runs in einem Projekt</div>
+      </div>
+    </div>
+    <nav class="section-nav">
+      <ul>
+        <li><a href="#kontext">Kontext</a></li>
+        <li><a href="#projektuebersicht">Projektübersicht</a></li>
+        <li><a href="#vorgehen">Vorgehen</a></li>
+        <li><a href="#umsetzung">Umsetzung</a></li>
+        <li><a href="#tooling">Tooling</a></li>
+        <li><a href="#ressourcen">Weitere Ressourcen</a></li>
+      </ul>
+    </nav>
+  </section>
 
   <!-- ─── Einleitung ─────────────────────────── -->
   <section id="kontext">
