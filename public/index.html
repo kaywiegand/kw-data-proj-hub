@@ -35,7 +35,7 @@
     /* ─── Header — NUR Logo + Kontakt, alles untereinander, dunkel ── */
     header {
       background: #3E4A5C; color: #fff;
-      padding: 4rem 0;
+      padding: 6rem 0;
     }
     .header-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
     header img.logo { display: block; height: 52px; width: auto; margin-bottom: 1.9rem; }
@@ -61,13 +61,21 @@
     /* ─── Main rhythm — einheitlich 8rem Abstand zwischen allen Blöcken ── */
     main { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
     section { margin-top: 8rem; }
+    main > section:first-child { margin-top: 4rem; }
 
     .section-label {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--accent); margin-bottom: 0.6em;
     }
     h2 { font-size: 1.4rem; font-weight: 700; color: var(--ink); margin-bottom: 0.5rem; }
-    .section-intro { font-size: 0.92rem; color: var(--ink-body); margin-bottom: 0.5rem; line-height: 1.6; }
+    .section-intro { font-size: 0.92rem; color: var(--ink-body); margin-bottom: 2em; line-height: 1.6; }
+
+    /* ─── Section-Nav — schlicht, springt per Anchor zu den Sections ── */
+    .section-nav { max-width: 900px; margin: 4rem auto; padding: 0 2rem; }
+    .section-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4em; justify-content: center; }
+    .section-nav li:not(:last-child)::after { content: "·"; margin-left: 0.4em; color: var(--card-border); }
+    .section-nav a { font-size: 0.8rem; font-weight: 700; color: var(--ink-soft); text-decoration: none; }
+    .section-nav a:hover { color: var(--accent); }
 
     .about-grid { display: flex; gap: 3rem; margin-top: 1.2rem; }
     .about-col { flex: 1; min-width: 0; }
@@ -199,12 +207,24 @@
   </div>
 </div>
 
+<nav class="section-nav">
+  <ul>
+    <li><a href="#kontext">Kontext</a></li>
+    <li><a href="#projektuebersicht">Projektübersicht</a></li>
+    <li><a href="#vorgehen">Vorgehen</a></li>
+    <li><a href="#umsetzung">Umsetzung</a></li>
+    <li><a href="#tooling">Tooling</a></li>
+    <li><a href="#ressourcen">Weitere Ressourcen</a></li>
+  </ul>
+</nav>
+
 <main>
 
   <!-- ─── Einleitung ─────────────────────────── -->
-  <section>
+  <section id="kontext">
     <div class="section-label">Kontext</div>
     <h2>Einleitung zur Projektübersicht</h2>
+    <p class="section-intro">Wer ich bin, warum dieser Hub existiert und wie ich arbeite — kurz zusammengefasst.</p>
     <div class="about-grid">
       <div class="about-col">
         <div class="about-item"><strong>Über mich</strong>Applied Data Analyst &amp; Technology Consultant mit 15+ Jahren Erfahrung in digitalen Projekten. Durch meine gezielte Data-Spezialisierung verbinde ich jahrelange Praxis in Engineering, Consulting und Produktentwicklung mit modernem Data-Handwerk (Python, SQL, Power BI, Machine Learning).</div>
@@ -218,7 +238,7 @@
   </section>
 
   <!-- ─── Projektübersicht ─────────────────────────── -->
-  <section>
+  <section id="projektuebersicht">
     <div class="section-label">Projektübersicht</div>
     <h2>Auswahl an Engineering, Analysis und Science Projekten</h2>
     <p class="section-intro">Kurze inhaltliche Beschreibung je Projekt, mit Verweis auf die jeweilige Case-Seite mit mehreren Perspektiven/Stories.</p>
@@ -258,9 +278,10 @@
   </section>
 
   <!-- ─── Data-to-Value Approach — E9 Variante B: Verbundene Linie ─── -->
-  <section>
+  <section id="vorgehen">
     <div class="section-label">Vorgehen</div>
     <h2>Data-to-Value Approach</h2>
+    <p class="section-intro">Der strategische Rahmen, in dem ich Data-Projekte von der ersten Fragestellung bis zum Business Impact denke.</p>
     <div class="h-timeline">
       <div class="ht-line-row">
         <div class="ht-dot-wrap"><div class="ht-dot"></div></div>
@@ -308,9 +329,10 @@
   </section>
 
   <!-- ─── Data Analytics Workflow (~CRISP-DM) ─────────────── -->
-  <section>
+  <section id="umsetzung">
     <div class="section-label">Umsetzung</div>
     <h2>Data Analytics Workflow (~CRISP-DM)</h2>
+    <p class="section-intro">Die konkrete Umsetzung dieses Ansatzes im Tagesgeschäft, Schritt für Schritt.</p>
     <div class="g12">
       <div class="g12-tl">
         <div class="timeline">
@@ -334,7 +356,7 @@
   </section>
 
   <!-- ─── Tooling — E6 Box-Grid ─────────────── -->
-  <section>
+  <section id="tooling">
     <div class="section-label">Tooling</div>
     <h2>Eingesetzte Tech-Stacks</h2>
     <p class="section-intro">Vorläufiger Eindruck der eingesetzten Tech-Stacks — projektübergreifend, nicht erschöpfend.</p>
@@ -350,7 +372,7 @@
   </section>
 
   <!-- ─── Weitere Ressourcen ─────────────────────── -->
-  <section>
+  <section id="ressourcen">
     <div class="section-label">Weitere Ressourcen</div>
     <h2>Accounts &amp; Profile</h2>
     <p class="section-intro">Bei Fragen, Ideen oder für einen kurzen Austausch – gerne einfach melden!</p>
