@@ -69,12 +69,13 @@
     h2 { font-size: 1.4rem; font-weight: 700; color: var(--ink); margin-bottom: 0.5rem; }
     .section-intro { font-size: 0.92rem; color: var(--ink-body); margin-bottom: 2em; line-height: 1.6; }
 
-    /* ─── Section-Nav — schlicht, springt per Anchor zu den Sections ── */
-    .section-nav { margin-top: 2rem; }
-    .section-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4em; }
-    .section-nav li:not(:last-child)::after { content: "·"; margin-left: 0.4em; color: var(--card-border); }
-    .section-nav a { font-size: 0.8rem; font-weight: 700; color: var(--ink-soft); text-decoration: none; }
-    .section-nav a:hover { color: var(--accent); }
+    /* ─── Section-Nav — Tab-Bar mit Grundlinie, Akzent-Unterstrich pro Link beim Hover ── */
+    .section-nav { margin-top: 2rem; border-bottom: 1px solid var(--card-border); }
+    .section-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1.8rem; }
+    .section-nav a { position: relative; display: inline-block; font-size: 0.8rem; font-weight: 700; color: var(--ink-soft); text-decoration: none; padding-bottom: 12px; }
+    .section-nav a::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
+    .section-nav a:hover { color: var(--ink); }
+    .section-nav a:hover::after { transform: scaleX(1); }
 
     .about-grid { display: flex; gap: 3rem; margin-top: 1.2rem; }
     .about-col { flex: 1; min-width: 0; }
@@ -187,8 +188,8 @@
   <!-- ─── Schnelleinstieg — KPIs + Sprungnavigation ─────────────── -->
   <section id="schnelleinstieg">
     <div class="section-label">Schnelleinstieg</div>
-    <h2>Auf einen Blick</h2>
-    <p class="section-intro">Spannende Kennzahlen auf einen Blick — und von hier direkt zum gewünschten Thema springen.</p>
+    <h2>Spannende Zahlen und direkte Links</h2>
+    <p class="section-intro">Interessante Kennzahlen auf einen Blick — und von hier direkt zum gewünschten Thema springen.</p>
     <div class="kpi-row">
       <div class="kpi">
         <div class="v">1</div>
