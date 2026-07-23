@@ -104,8 +104,9 @@
     .vb-inner h4 { text-align: center; font-size: 0.95rem; font-weight: 700; color: var(--ink); margin-bottom: 0.8rem; }
     .vb-inner ul { list-style: disc; padding-left: 1.1em; }
     .vb-inner li::marker { color: var(--accent); }
-    .vb-inner li { font-size: 0.85rem; color: var(--ink-body); padding: 0.5rem 0; border-top: 1px solid var(--card-border); }
+    .vb-inner li { font-size: 0.85rem; color: var(--ink-body); padding: 0.5rem 0; border-top: 1px solid var(--card-border); white-space: nowrap; }
     .vb-inner li:first-child { border-top: none; }
+    .vb-inner.wide { max-width: 260px; }
     .extra-text { margin-top: 1.6rem; }
     .extra-text p { font-size: 0.9rem; color: var(--ink-body); line-height: 1.6; margin: 0; max-width: 72ch; }
     .extra-text.full-width p { max-width: none; }
@@ -267,7 +268,7 @@
     <div class="vb-grid">
       <div class="vb-col">
         <div class="vb-inner">
-          <h4>Business Understanding</h4>
+          <h4>Insight &amp; Discovery</h4>
           <ul>
             <li>Business Problems &amp; Processes</li>
             <li>Systems &amp; Data Landscape</li>
@@ -276,8 +277,8 @@
         </div>
       </div>
       <div class="vb-col">
-        <div class="vb-inner">
-          <h4>Data &amp; Technology</h4>
+        <div class="vb-inner wide">
+          <h4>Decision &amp; Action</h4>
           <ul>
             <li>Data Architecture &amp; Integration</li>
             <li>Analytics &amp; Data Science</li>
@@ -287,7 +288,7 @@
       </div>
       <div class="vb-col">
         <div class="vb-inner">
-          <h4>Business Impact</h4>
+          <h4>Value &amp; Growth</h4>
           <ul>
             <li>Insights extrahieren</li>
             <li>Decisions fundieren</li>
