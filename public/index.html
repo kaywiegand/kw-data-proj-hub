@@ -47,9 +47,9 @@
 
     /* ─── Hero — Titel/Subline/KPIs, separat mit großzügigem Abstand ── */
     .hero { max-width: 900px; margin: 8rem auto 0; padding: 0 2rem; }
-    .hero h1 { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 4rem; text-transform: uppercase; color: var(--ink); margin-bottom: 0.8rem; letter-spacing: -0.01em; }
-    .hero .subtitle { font-size: 1rem; color: var(--ink-body); max-width: 70ch; margin-bottom: 0.5rem; }
-    .hero h1 + .subtitle { margin-bottom: 0; }
+    .hero h1 { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 4rem; text-transform: uppercase; color: var(--ink); margin-bottom: 0; letter-spacing: -0.01em; }
+    .hero .subtitle { font-size: 1.1em; color: var(--ink-body); max-width: 70ch; margin-bottom: 0; }
+    .hero .section-label { margin-top: 4em; margin-bottom: 2em; }
 
     .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
     @media (max-width: 760px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } }
@@ -196,7 +196,6 @@
 <div class="hero">
   <h1>Data & AI Projects</h1>
   <p class="subtitle">Data Engineering — Data Analysis — Data Science — Artificial Intelligence</p>
-  <p class="subtitle">Kontext · Projektübersicht · Vorgehen · Umsetzung · Kontakt</p>
   <p class="section-label">Spannende Kennzahlen auf einen Blick</p>
   <div class="kpi-row">
     <div class="kpi accent">
@@ -398,11 +397,11 @@
 <script>
 (function () {
   var nav = document.querySelector('.fixed-nav');
-  var h1 = document.querySelector('.hero h1');
+  var anchorEl = document.querySelector('.hero .subtitle');
 
   function anchorNav() {
-    var h1DocTop = h1.getBoundingClientRect().top + window.scrollY;
-    nav.style.top = h1DocTop + 'px';
+    var anchorDocTop = anchorEl.getBoundingClientRect().top + window.scrollY;
+    nav.style.top = anchorDocTop + 'px';
   }
 
   anchorNav();
