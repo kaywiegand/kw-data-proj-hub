@@ -81,3 +81,38 @@ Metriken, Findings, Outputs gehören in Notebooks/Code — nicht hier.
   auf 5 Spalten (GitHub/LinkedIn/Xing/Mail/Telefon), Footer auf reine
   Kurzzeile reduziert.
 - Nächster Schritt: 5. Projektkarte mit echtem Case aktualisieren sobald verfügbar.
+
+## 2026-07-23 — Approach-Layout, Fixed-Nav, Hero-Feinschliff, Design-System
+
+- **Data-to-Value Approach**: 3 Layout-Alternativen (Card-Stil, Verbundene
+  Linie, Zentriert) gebaut und alle drei zusätzlich in
+  `css-style-guides/b/STYLEGUIDE.html` als Beispiel 31/32/33 unter Element E9
+  dokumentiert (bleibt lokal, Ordner ist bewusst nicht in git). Kay wählt
+  "Verbundene Linie" — Timeline-Punkte mit Verbindungsstrich zur Headline,
+  Bulletpoints in Akzentfarbe, dritte Spalte auf drei parallele Zeilen
+  (Insight & Discovery / Decision & Action / Value & Growth).
+- **Spacing-System**: auf Kays Prinzip "Abstände als Bruchteil eines
+  Basiswerts berechnen, nicht nach Auge" umgestellt (Memory
+  `feedback_design_spacing_system`) — 8rem-Grundrhythmus zwischen
+  Header/Hero/Sections/Footer, Header-Padding testweise 4rem → 6rem,
+  `.section-label`/`.section-intro`-Abstände ebenfalls auf feste
+  em-Werte (1em / 3em) gebracht statt Einzelwerte.
+- **Navigation mehrfach iteriert**: von Klartext-Liste → Tab-Bar mit
+  Unterstrich-Hover → schließlich fixed Sidebar rechts, Links untereinander
+  rechtsbündig, Unterstrich zieht sich rechts→links auf, aktive Section wird
+  beim Scrollen hervorgehoben. Technische Notiz: Scroll-Highlight läuft über
+  einen `scroll`-Event + `getBoundingClientRect`-Check, nicht über
+  `IntersectionObserver` — Observer feuerte im Preview-Tool (headless)
+  nicht zuverlässig, der Scroll-Event-Ansatz ist robuster und in jedem
+  Browser gleich verlässlich. Nav-Top-Anker sitzt auf der Position der
+  Hero-Subline (per JS gemessen, nicht hart codiert).
+- **Hero verschlankt**: KPI-Row + Nav aus eigener "Schnelleinstieg"-Section
+  wieder aufgelöst und direkt in den Hero integriert, zweite Klartext-Subline
+  (Sektionsliste) entfernt, da die echte Nav diese Funktion übernimmt.
+  "Weitere Ressourcen" durchgängig zu "Kontakt" umbenannt (Section-Label, ID,
+  Nav-Label).
+- Alles committed + gepusht, live auf `data.kaywiegand.de` verifiziert.
+- **Session-Ende (Kay, 2026-07-23):** Hub ist in aktuellem Zustand
+  einsatzbereit für Bewerbungen. Weiterarbeit erst wieder, wenn neue
+  Projekte/Cases anstehen (siehe BACKLOG #2 — weitere Cases ergänzen sobald
+  Portfolio-Status wechselt; BACKLOG #3 — KPI-Vertiefung).

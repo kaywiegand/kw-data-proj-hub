@@ -12,6 +12,7 @@ Prio: `1` = hoch · `2` = mittel · `3` = niedrig
 | 1 | Sobald `kw-data-portfolio` fertig ist: Hub archivieren oder auf sie umleiten | 3 | Setup |
 | 2 | Neue portfolio-ready Cases (research-engine, telefonica-churn, nyc-taxi-routes, fl-airport-company) ergänzen sobald Status wechselt | 2 | Setup |
 | 3 | KPI-Leiste erweitern sobald mehr Cases da sind — Komplexitäts-/Tiefe-Metriken statt reiner Volumen-Zahlen (voller Vorschlag siehe Notiz unten) | 2 | Kay-Feedback 2026-07-23 |
+| 4 | 5. Projektkarte (aktuell AI Dev Toolchain doppelt, Badge "Business Intelligence") mit echtem Case befüllen sobald verfügbar | 1 | Redesign 2026-07-23 |
 
 ---
 

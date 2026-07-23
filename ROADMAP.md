@@ -16,9 +16,13 @@ Portfolio-Website) ist noch nicht fertig (Milestone B–E offen).
 ## Phasen
 
 - [x] Phase 1 — Setup & Struktur (MD-Files, git, `.gitignore`)
-- [ ] Phase 2 — `public/index.html` mit allen 4 Karten (3 Data-Cases + Meta-Case)
-- [ ] Phase 3 — GitHub-Repo + Pages-Deploy live
-- [ ] Phase 4 — Link in Bewerbungen/CV im Einsatz
+- [x] Phase 2 — `public/index.html` mit allen 5 Karten (3 Data-Cases + Meta-Case + Platzhalter), Bewerbungsunterlagen-Redesign, Fixed-Nav mit Scroll-Highlight, einheitliches 8rem-Spacing-System
+- [x] Phase 3 — GitHub-Repo + Pages-Deploy live, Custom Domain `data.kaywiegand.de` aktiv
+- [x] Phase 4 — Link einsatzbereit für Bewerbungen/CV
+
+**Pausiert seit 2026-07-23** — Kay-Entscheidung: Weiterarbeit erst wieder,
+wenn neue Projekte/Cases anstehen (dann 5. Karte mit echtem Case befüllen,
+ggf. weitere Cases ergänzen, siehe BACKLOG).
 
 ---
 
