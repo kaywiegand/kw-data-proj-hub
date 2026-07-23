@@ -46,11 +46,11 @@
     header .identity-text a:hover { text-decoration: underline; }
 
     /* ─── Hero — Titel/Subline/KPIs, separat mit großzügigem Abstand ── */
-    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 2rem 0; }
+    .hero { max-width: 900px; margin: 8rem auto 0; padding: 0 2rem; }
     .hero h1 { font-family: 'Lato', sans-serif; font-weight: 900; font-size: 4rem; text-transform: uppercase; color: var(--ink); margin-bottom: 0.8rem; letter-spacing: -0.01em; }
     .hero .subtitle { font-size: 1rem; color: var(--ink-body); max-width: 70ch; }
 
-    .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+    .kpi-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; max-width: 900px; margin: 8rem auto 0; padding: 0 2rem; }
     @media (max-width: 760px) { .kpi-row { grid-template-columns: repeat(2, 1fr); } }
     .kpi { border-left: 3px solid var(--card-border); padding-left: 14px; text-align: left; min-width: 0; }
     .kpi.accent { border-left-color: var(--accent); }
@@ -58,9 +58,9 @@
     .kpi.accent .v { color: var(--accent); }
     .kpi .l { font-size: 0.68rem; color: var(--ink-soft); letter-spacing: 0.04em; margin-top: 6px; }
 
-    /* ─── Main rhythm ─────────────────────────── */
-    main { max-width: 900px; margin: 0 auto; padding: 5rem 2rem 0; }
-    section { margin-bottom: 6rem; }
+    /* ─── Main rhythm — einheitlich 8rem Abstand zwischen allen Blöcken ── */
+    main { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    section { margin-top: 8rem; }
 
     .section-label {
       font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
@@ -121,7 +121,7 @@
     .timeline { position: relative; display: flex; flex-direction: column; gap: 18px; padding-left: 4px; }
     .timeline::before { content: ""; position: absolute; left: 17px; top: 8px; bottom: 8px; width: 1px; background: var(--card-border); }
     .tl-item { position: relative; display: flex; gap: 14px; align-items: center; z-index: 1; }
-    .tl-num { width: 34px; height: 34px; border-radius: 9px; background: #fff; border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; color: var(--accent); flex: none; }
+    .tl-num { width: 34px; height: 34px; border-radius: 9px; background: #fff; border: 1px solid var(--accent); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; color: var(--accent); flex: none; }
     .tl-num.highlight { background: var(--accent); color: #fff; }
     .tl-item h4 { font-size: 0.9rem; font-weight: 700; color: var(--ink); margin: 0; }
 
@@ -143,7 +143,7 @@
     .quick-link::before { content: "→"; font-weight: 700; }
 
     /* ─── Footer ─────────────────────────── */
-    footer { background: var(--card); border-top: 1px solid var(--card-border); padding: 2rem; text-align: center; color: var(--ink-soft); font-size: 0.85rem; margin-top: 4rem; }
+    footer { background: var(--card); border-top: 1px solid var(--card-border); padding: 2rem; text-align: center; color: var(--ink-soft); font-size: 0.85rem; margin-top: 8rem; }
     footer a { color: var(--accent); text-decoration: none; }
     footer a:hover { text-decoration: underline; }
   </style>
