@@ -19,10 +19,10 @@
       --ink-body:     #5A534C;
       --ink-soft:     #8B837A;
       --accent:       #594B3B;
-      --accent-light: #EDE7DF;
-      --card:         #F4F1EC;
-      --card-border:  #E3DCD1;
-      --bg:           #FBFAF8;
+      --accent-light: #EAEAEA;
+      --card:         #F0F0F0;
+      --card-border:  #E0E0E0;
+      --bg:           #FAFAFA;
       --radius:       6px;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,8 +38,9 @@
       padding: 4rem 0 3.5rem;
     }
     .header-inner { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
-    header img.logo { height: 52px; width: auto; margin-bottom: 1.6rem; }
-    header .identity-text { font-size: 0.85em; line-height: 1.7; }
+    header img.logo { display: block; height: 52px; width: auto; margin-bottom: 1.6rem; }
+    header .identity-text { font-size: 0.85em; line-height: 1.5; }
+    header .identity-text.contact { margin-top: 1.6rem; }
     header .identity-text strong { display: inline-block; margin-top: 0.4em; }
     header .identity-text a { color: inherit; text-decoration: none; }
     header .identity-text a:hover { text-decoration: underline; }
@@ -158,8 +159,8 @@
       <strong>Applied Data Analyst | Technology Consultant</strong>
       <br>
       Dipl.-Ing. (FH) Medieninformatik
-      <br><br>
-      <br>
+    </p>
+    <p class="identity-text contact">
       Berlin
       <br>
       <a href="tel:+4915202907948">+49 152 029 079 48</a>
